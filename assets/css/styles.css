@@ -1,0 +1,43 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #222;
+  color: #fff;
+}
+
+#logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+button {
+  padding: 10px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+#tagline {
+  font-size: 1.2em;
+  text-align: center;
+  margin-top: 50px;
+}
+
+#exercise-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+
+.exercise-section {
+  width: 30%;
+  height: 200px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
