@@ -29,15 +29,47 @@ button {
 
 #exercise-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   margin-top: 50px;
 }
 
-.exercise-section {
+.exercise1, .exercise2, .exercise3 {
   width: 30%;
-  height: 200px;
+  height: 220px;
   border: 1px solid #ccc;
   padding: 20px;
   box-sizing: border-box;
-  text-align: center;
+  text-align: left;
+  word-wrap: break-word;
+
+}
+
+.search {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  }
+
+.reSearch {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+   } 
+
+#recipeContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 50px;
+
+}
+
+.recipe1, .recipe2, .recipe3 {
+  width: 30%;
+  height: 200px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: left;
+  word-wrap: break-word;
 }
