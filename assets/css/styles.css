@@ -1,79 +1,77 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&family=Poppins:wght@600&display=swap");
 
 :root {
-    --main-color: #064789;
-
+  --main-color: #064789;
 }
 
 * {
-    font-family: 'Lora', serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    border: none;
-    outline: none;
-    text-transform: capitalize;
-    transition: all .2s linear;
+  font-family: "poppins", serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  text-transform: capitalize;
+  transition: all 0.2s linear;
 }
 
 html {
-    font-size: 62.5%;
-    scroll-behavior: smooth;
-    overflow-x: hidden;
-    scroll-padding-top: 7rem;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  scroll-padding-top: 7rem;
 }
 ::selection {
-    background: #064789;
-    color: #EBF2FA ;
+  background: #064789;
+  color: #ebf2fa;
 }
-    html::-webkit-scrollbar{
-    width: 1rem;
+html::-webkit-scrollbar {
+  width: 1rem;
 }
 
 html::-webkit-scrollbar-track {
-    background-color: #427AA1 ;
+  background-color: #427aa1;
 }
 
 html::-webkit-scrollbar-thumb {
-    background: var(--main-color);
-    border-radius: 5rem;
+  background: var(--main-color);
+  border-radius: 5rem;
 }
 
 /*Header start */
 
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  padding: 3rem 9%;
+header {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  background-color: #427AA1;
-  box-shadow: 0rem .1rem .5rem #064789;
-  z-index: 1000;
-
+  padding: 20px;
+  background-color: #064789;
+  color: #fff;
 }
 
-.header .logo {
-    font-size: 2.5rem;
-    color:#EBF2FA;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: .1rem;
+#logo {
+  font-size: 1rem;
+  font-weight: bold;
 }
 
-.header .logo span {
-    color:#EBF2FA;
-    text-transform: uppercase;
+.login-btn {
+  background: linear-gradient(to right, #00b4db, #0083b0);
+  border: none;
+  color: #ebf2fa;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 5px;
+  outline: none;
 }
 
-.header .navbar a{
-    font-size: 1.7rem;
-    color: #EBF2FA;
-    margin: 0 1rem;
+.login-btn:hover {
+  background: #0083b0;
+  color: white;
 }
 
 #exercise-container {
@@ -82,7 +80,9 @@ html::-webkit-scrollbar-thumb {
   margin-top: 50px;
 }
 
-.exercise1, .exercise2, .exercise3 {
+.exercise1,
+.exercise2,
+.exercise3 {
   width: 30%;
   height: 220px;
   border: 1px solid #ccc;
@@ -90,30 +90,30 @@ html::-webkit-scrollbar-thumb {
   box-sizing: border-box;
   text-align: left;
   word-wrap: break-word;
-
 }
 
 .search {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  }
+}
 
 .reSearch {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-   } 
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 
 #recipeContainer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin-top: 50px;
-
 }
 
-.recipe1, .recipe2, .recipe3 {
+.recipe1,
+.recipe2,
+.recipe3 {
   width: 30%;
   height: 200px;
   border: 1px solid #ccc;
@@ -123,85 +123,73 @@ html::-webkit-scrollbar-thumb {
   word-wrap: break-word;
 }
 .header .navbar a:hover {
-    color: #427AA1;
+  color: #427aa1;
 }
 
 .header .icons div {
-    font-size: 2.5rem;
-    color: #EBF2FA;
-    padding: .5rem;
-    cursor: pointer;
-    margin-left: 0.5rem;
+  font-size: 2.5rem;
+  color: #ebf2fa;
+  padding: 0.5rem;
+  cursor: pointer;
+  margin-left: 0.5rem;
 }
 
 .header .icons div:hover {
-    transform: rotate(180deg);
-}
-
-.header.icons a{
-    font-size: 1.5rem;
-    letter-spacing: .1rem;
-    color: #EBF2FA;
-    background: #427AA1;
-    font-weight: 500;
-    text-transform: uppercase;
-    padding: .8rem 2rem;
-    border: none;
-}
-
-.header.icons a:hover {
-    color: var(--main-color);
-    background: #427AA1;
+  transform: rotate(180deg);
 }
 
 #menu-btn {
-    display: none;
+  display: none;
 }
 
-/*Header ends */
+/* footer styles */
 
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #064789;
+  color: white;
+  padding: 20px;
+  flex-shrink: 0;
+}
+
+footer p {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+#social-media-icons img {
+  width: 2rem;
+  height: auto;
+  margin: 0 10px;
+}
 
 /* media queries start */
 
-@media (max-width:991px) {
-    html {
-        font-size: 55%;
-    }
-    .header{
-        padding: 2rem;
-    }
-}
-
-@media (max-width:768px) {
-    #menu-btn{
-      display: inline-block;  
-    }
-    .header.navbar{
-        position: absolute;
-        top: 100%;
-        right: 0;
-        left: 0;
-        background: #064789;
-
-    }
-
-    .header .navbar a{
-        display: block;
-        margin: 2rem;
-        font-size: 2rem;
-    }
-}
-
-@media (max-width:450px) {
-    html {
-        font-size: 50%;
-    }
-    .header .icons a{
-        letter-spacing: none;
-        font-size: 1.3rem;
-        padding: 1rem;
-    }
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+  .header {
+    padding: 2rem;
+  }
 }
 
 /* media queries finished */
- 
+
+@media (max-width: 768px) {
+  #logo img {
+    width: 60%; /* Adjust this value as per your need */
+    height: auto;
+  }
+  .login-btn {
+    padding: 10px 20px; /* Adjust this value as per your need */
+    font-size: 14px; /* Adjust this value as per your need */
+  }
+
+  header {
+    padding: 10px; /* Adjust this value as per your need */
+  }
+}
