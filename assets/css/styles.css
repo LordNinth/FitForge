@@ -49,10 +49,7 @@ header {
   color: #fff;
 }
 
-#logo {
-  font-size: 1rem;
-  font-weight: bold;
-}
+
 
 .login-btn {
   background: linear-gradient(to right, #00b4db, #0083b0);
@@ -133,12 +130,9 @@ header {
   box-sizing: border-box;
   text-align: left;
   word-wrap: break-word;
-<<<<<<< HEAD
 }
-=======
 
 } */
->>>>>>> d5781b85ca64ae994e2202af75448547d23a7e22
 
 .search {
   display: flex;
@@ -229,15 +223,16 @@ footer p {
 
 @media (max-width: 768px) {
   #logo img {
-    width: 60%; /* Adjust this value as per your need */
+    width: 60%;
     height: auto;
   }
+
   .login-btn {
-    padding: 10px 20px; /* Adjust this value as per your need */
-    font-size: 14px; /* Adjust this value as per your need */
+    padding: 10px 20px; 
+    font-size: 14px; 
   }
 
   header {
-    padding: 10px; /* Adjust this value as per your need */
+    padding: 10px; 
   }
 }
