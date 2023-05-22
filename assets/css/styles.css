@@ -76,12 +76,54 @@ html::-webkit-scrollbar-thumb {
     margin: 0 1rem;
 }
 
-#exercise-container {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 50px;
+/*section one CSS*/
+
+#section-one{
+    padding: 200px 20px;
 }
 
+#exercise-container {
+  display: grid;
+  grid-template-areas: 
+  'excercise-one'
+  'excercise-two'
+  'excercise-three'
+  ;
+  gap:20px;
+}
+
+#exercise-container div:nth-child(1){
+    grid-area:excercise-one;
+    padding: 20px;
+    border:black 1px solid;
+
+}
+
+#exercise-container div:nth-child(2){
+    grid-area:excercise-two;
+    padding: 20px;
+    border:black 1px solid;
+
+}
+
+#exercise-container div:nth-child(3){
+    grid-area:excercise-three;
+    padding: 20px;
+    border:black 1px solid;
+
+}
+
+    /*section one Desktop*/
+@media screen and (min-width:768px){
+    #exercise-container {
+        display: grid;
+        grid-template-areas: 
+        'excercise-one excercise-two excercise-three'
+        ;
+        gap:50px;
+      }
+}
+/*
 .exercise1, .exercise2, .exercise3 {
   width: 30%;
   height: 220px;
@@ -91,7 +133,7 @@ html::-webkit-scrollbar-thumb {
   text-align: left;
   word-wrap: break-word;
 
-}
+} */
 
 .search {
   display: flex;
