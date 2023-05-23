@@ -92,9 +92,10 @@ header {
 #exercise-container div:nth-child(1){
     grid-area:excercise-one;
     padding: 20px;
-    border:white 5px solid;
+    border:white 3px solid;
+    border-radius: 15px 50px 30px 5px;
    color: #ebf2fa ;
-    background-color:rgba(0, 180, 219, 0.7); 
+    background-color:rgba(0, 180, 219, 0.2); 
     
 
 }
@@ -102,21 +103,31 @@ header {
 #exercise-container div:nth-child(2){
     grid-area:excercise-two;
     padding: 20px;
-    border: white 5px solid;
+    border-radius: 15px 50px 30px 5px;
+    border: white 3px solid;
     color: #ebf2fa;
-    background-color: #00b4db; 
+    background-color: rgba(0, 180, 219, 0.2); 
 }
 
 #exercise-container div:nth-child(3){
     grid-area:excercise-three;
     padding: 20px;
-    border: white 5px solid;
+    border: white 3px solid;
+    border-radius: 15px 50px 30px 5px;
     color: #ebf2fa;
-    background-color: #00b4db; 
+    background-color: rgba(0, 180, 219, 0.2); 
 
 } 
+  #tagline {
+    color: #ebf2fa;
+    text-align: center;
+    padding: 50px;
+    text-decoration:underline;
+    font-size: 60px;
+    
+}
 main {
-    background-image: url("/assets/Gym-structure-1080x675.png") ;
+    background-image: url("/FitForge/assets/Gym-structure-1080x675.png") ;
     background-repeat: no-repeat;
     background-position: center; /* Center the image */
     height: 100%;
@@ -135,6 +146,10 @@ main {
         "excercise-one excercise-two excercise-three";
         gap: 50px;
       }
+}
+.login-btn {
+    color: #ebf2fa;
+    text-align: center;
 }
 /*
 .exercise1, .exercise2, .exercise3 {
@@ -222,6 +237,7 @@ footer p {
   height: auto;
   margin: 0 10px;
 }
+ 
 
 /* media queries start */
 
