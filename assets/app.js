@@ -131,17 +131,38 @@ async function fetchHealthData(age,gender,height,weight){
           
         
           // Display results
-          displayHealthData(result)
+          displayHealthData(result, age, gender, height, weight)
 	     } 
     catch (error) {
 		            console.error(error);
 	     }
 	}
-
+  //store fetched data into local storage
+  function storeHealthDataLocally(healthData, age, gender, height,weight){
+    //create an object to be stored
+    const storedData={
+      healthData:healthData,
+      age:age,
+      gender:gender,
+      height:height,
+      weight:weight
+    };
+    localStorage.setItem('storedData', JSON.stringify(storedData)); //convert it to a string before storage
+  }
   
   function displayHealthData(result) {
-    //extract data
-    console.log(result)
+
+    //pass user inputs into local storage
+    const age = ageSpinner.value;
+    const gender = genderVal.value;
+    const height =heightSpinner.value;
+    const weight =weightSpinner.value;
+   
+   //store the data and user inputs into local storage
+    storeHealthDataLocally(result, age, gender, height, weight);
+
+    //update display labesl with extracted a
+    console.log(result) //test if data is coming back
     const bmi = result.bmi
     const status  = result.bodyfat_status
       // Update the display labels with the extracted values
@@ -150,7 +171,6 @@ async function fetchHealthData(age,gender,height,weight){
   }
   // Code for the GO button
   goBtn.addEventListener('click',() => {
-	console.log('Button clicked')
     const age = ageSpinner.value;
     const gender = genderVal.value;
     const height = heightSpinner.value;
@@ -159,6 +179,25 @@ async function fetchHealthData(age,gender,height,weight){
     fetchHealthData(age,gender,height,weight);
   })
 
+//retrive data from storage and display it when the page loads
+function loadHealthDataFromLocalStorage(){
+  const storedData = localStorage.getItem('storedData'); 
+  if(storedData){
+    const parseData =JSON.parse(storedData)// covert stored data from a string to a javascript object
+    const {healthData, age, gender, height, weight} = parseData //assign retrieved data to its variables
+
+    //update the form field values
+    ageSpinner.value = age;
+    genderVal.value = gender;
+    heightSpinner.value = height;
+    weightSpinner.value =weight;
+    
+    //display loaded health data
+    displayHealthData(healthData, age, gender, height, weight)
+  }
+}
+//call the load function when the page loads
+window.addEventListener('load', loadHealthDataFromLocalStorage)
 //-------------------------------------- Changes from Francis End Here-----------------------------------------
 
 
