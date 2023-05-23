@@ -124,19 +124,16 @@ main {
     color: #ebf2fa;
     text-decoration: double;
     font-size: 30px;
-    border-radius: 5px white;
-    
-
+    border-radius: 5px white;  
 }
-/*Vik */
+
     /*section one Desktop*/
-@media screen and (min-width:768px){
+@media only screen (min-width:768px){
     #exercise-container {
         display: grid;
         grid-template-areas: 
-        'excercise-one excercise-two excercise-three'
-        ;
-        gap:50px;
+        "excercise-one excercise-two excercise-three";
+        gap: 50px;
       }
 }
 /*
