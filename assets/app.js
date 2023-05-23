@@ -45,9 +45,9 @@ async function checkEx(body) {
 
 	//ex1
 	document.querySelector(".exName").textContent = domNameValue.name;
-	// document.querySelector(".exTarget").textContent = domNameValue.target
-	// document.querySelector(".exEquipment").textContent = domNameValue.equipment;
-	// document.querySelector(".exUrl").textContent = domNameValue.gifUrl;	
+	document.querySelector(".exTarget").textContent = domNameValue.target
+	document.querySelector(".exEquipment").textContent = domNameValue.equipment;
+	document.querySelector(".exUrl").textContent = domNameValue.gifUrl;	
 	//NOTE: Dont uncomment these, free subcription only lets you call so many times before hitting daily limit!!!!!!!!!!!!!!!!!
 	
 }
