@@ -150,12 +150,13 @@ async function fetchHealthData(age,gender,height,weight){
   }
   // Code for the GO button
   goBtn.addEventListener('click',() => {
+	console.log('Button clicked')
     const age = ageSpinner.value;
     const gender = genderVal.value;
     const height = heightSpinner.value;
     const weight = weightSpinner.value;
     console.log(`age:${ageSpinner.value}|gender:${genderVal.value} |height:${heightSpinner.value}|weight:${weightSpinner.value}`)//testing getting user input
-    fetchHealthData(age,gender,height,weight);
+   // fetchHealthData(age,gender,height,weight);
   })
 
 //-------------------------------------- Changes from Francis End Here-----------------------------------------
