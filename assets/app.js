@@ -28,69 +28,67 @@ const options1 = {
 async function checkEx(body) {
 	const response = await fetch(`https://exercisedb.p.rapidapi.com/exercises/target/${body}`, options);
 	const data = await response.json();
-	console.log(data);
+
+	//loop object to find randomg
+	function randData(data){
+		
+		
+		const keys = Object.keys(data);
+		const values = Object.values(data);
+		randKeys = keys[Math.floor(Math.random()*keys.length)];
+		randValues = values[Math.floor(Math.random()*values.length)];
+		return	randValues 
+		
+	}
+
+	const domNameValue = randData(data); // dont want to call function everytime
 
 	//ex1
-	document.querySelector(".exName").innerHTML = data[0].name;
-	// document.querySelector(".exTarget").innerHTML = data[0].target
-	// document.querySelector(".exEquipment").innerHTML = data[0].equipment;
-	// document.querySelector(".exUrl").innerHTML = data[0].gifUrl;
-
-	//ex2
-	// document.querySelector(".exName1").innerHTML = data[1].name;
-	// document.querySelector(".exTarget1").innerHTML = data[1].target
-	// document.querySelector(".exEquipment1").innerHTML = data[1].equipment;
-	// document.querySelector(".exUrl1").innerHTML = data[1].gifUrl;
-
-	//ex3
-	// document.querySelector(".exName2").innerHTML = data[2].name;
-	// document.querySelector(".exTarget2").innerHTML = data[2].target
-	// document.querySelector(".exEquipment2").innerHTML = data[2].equipment;
-	// document.querySelector(".exUrl2").innerHTML = data[2].gifUrl;
-	
+	document.querySelector(".exName").textContent = domNameValue.name;
+	// document.querySelector(".exTarget").textContent = domNameValue.target
+	// document.querySelector(".exEquipment").textContent = domNameValue.equipment;
+	// document.querySelector(".exUrl").textContent = domNameValue.gifUrl;	
 	//NOTE: Dont uncomment these, free subcription only lets you call so many times before hitting daily limit!!!!!!!!!!!!!!!!!
 	
 }
 
-//call function
+//calling checkEx function
 exBtn.addEventListener('click', ()=> {
 	checkEx(exerciseInput.value);
 })
 
-
-
-//call recipe
+//fetch recipe api
 async function checkRecipe(params) {
-	const response = await fetch(`https://edamam-recipe-search.p.rapidapi.com/search?q=${params}`, options1); 
-	const data1 = await response.json();
-	console.log(data1);
-	// recipe1
-	document.querySelector(".recipeName").innerHTML = data1.hits[0].recipe.label;
-	// document.querySelector(".cuisineType").innerHTML = data1.hits[0].recipe.cuisineType;
-	// document.querySelector(".calories").innerHTML = data1.hits[0].recipe.calories;
-	// document.querySelector(".recipeUrl").innerHTML = data1.hits[0].recipe.url;
+	const response1 = await fetch(`https://edamam-recipe-search.p.rapidapi.com/search?q=${params}`, options1); 
+	const recipeData = await response1.json();
+	// console.log(recipeData);
+	const arrRecipe = recipeData.hits;
+	// console.log(arrRecipe);
 
+	//loop object to find random
+	function randRecipe(arrRecipe){
+		const keys1 = Object.keys(arrRecipe);
+		const values1 = Object.values(arrRecipe);
+		randKeys1 = keys1[Math.floor(Math.random()*keys1.length)]; //redundant
+		randValues1 = values1[Math.floor(Math.random()*values1.length)];
+		return	randValues1
+		} 
+	const domRecipeValues = randRecipe(arrRecipe); // dont want to call function everytime
+	console.log(domRecipeValues);
 
-	// recipe2
-	document.querySelector(".recipeName1").innerHTML = data1.hits[1].recipe.label;
-	// document.querySelector(".cuisineType1").innerHTML = data1.hits[1].recipe.cuisineType;
-	// document.querySelector(".calories1").innerHTML = data1.hits[1].recipe.calories;
-	// document.querySelector(".recipeUrl1").innerHTML = data1.hits[1].recipe.url;
-
-	// recipe3
-	document.querySelector(".recipeName2").innerHTML = data1.hits[2].recipe.label;
-	// document.querySelector(".cuisineType2").innerHTML = data1.hits[2].recipe.cuisineType;
-	// document.querySelector(".calories2").innerHTML = data1.hits[2].recipe.calories;
-	// document.querySelector(".recipeUrl2").innerHTML = data1.hits[2].recipe.url;
-
+	// recipe
+	document.querySelector(".recipeName").innerHTML = domRecipeValues.recipe.label;
+	document.querySelector(".cuisineType").innerHTML = domRecipeValues.recipe.cuisineType;
+	document.querySelector(".calories").innerHTML = domRecipeValues.recipe.calories;
+	document.querySelector(".recipeUrl").innerHTML = domRecipeValues.recipe.url;
 }
 
 
 
-// recipeBtn.addEventListener('click', ()=> {
-// 	checkRecipe(recipeInput.value);
+recipeBtn.addEventListener('click', ()=> {
+	checkRecipe(recipeInput.value);
 
-// })
+})
 
 
 
