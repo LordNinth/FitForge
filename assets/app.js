@@ -87,10 +87,10 @@ async function checkRecipe(params) {
 
 
 
-recipeBtn.addEventListener('click', ()=> {
-	checkRecipe(recipeInput.value);
+// recipeBtn.addEventListener('click', ()=> {
+// 	checkRecipe(recipeInput.value);
 
-})
+// })
 
 
 
@@ -156,7 +156,7 @@ async function fetchHealthData(age,gender,height,weight){
     const height = heightSpinner.value;
     const weight = weightSpinner.value;
     console.log(`age:${ageSpinner.value}|gender:${genderVal.value} |height:${heightSpinner.value}|weight:${weightSpinner.value}`)//testing getting user input
-   // fetchHealthData(age,gender,height,weight);
+    fetchHealthData(age,gender,height,weight);
   })
 
 //-------------------------------------- Changes from Francis End Here-----------------------------------------
