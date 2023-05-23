@@ -37,13 +37,13 @@ async function checkEx(body) {
 	// document.querySelector(".exUrl").innerHTML = data[0].gifUrl;
 
 	//ex2
-	document.querySelector(".exName1").innerHTML = data[1].name;
+	// document.querySelector(".exName1").innerHTML = data[1].name;
 	// document.querySelector(".exTarget1").innerHTML = data[1].target
 	// document.querySelector(".exEquipment1").innerHTML = data[1].equipment;
 	// document.querySelector(".exUrl1").innerHTML = data[1].gifUrl;
 
 	//ex3
-	document.querySelector(".exName2").innerHTML = data[2].name;
+	// document.querySelector(".exName2").innerHTML = data[2].name;
 	// document.querySelector(".exTarget2").innerHTML = data[2].target
 	// document.querySelector(".exEquipment2").innerHTML = data[2].equipment;
 	// document.querySelector(".exUrl2").innerHTML = data[2].gifUrl;
