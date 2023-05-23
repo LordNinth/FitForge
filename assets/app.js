@@ -197,6 +197,3 @@ function loadHealthDataFromLocalStorage(){
 //call the load function when the page loads
 window.addEventListener('load', loadHealthDataFromLocalStorage)
 //-------------------------------------- Changes from Francis End Here-----------------------------------------
-
-
-
