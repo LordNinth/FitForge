@@ -87,10 +87,10 @@ async function checkRecipe(params) {
 
 
 
-recipeBtn.addEventListener('click', ()=> {
-	checkRecipe(recipeInput.value);
+// recipeBtn.addEventListener('click', ()=> {
+// 	checkRecipe(recipeInput.value);
 
-})
+// })
 
 
 
@@ -150,6 +150,7 @@ async function fetchHealthData(age,gender,height,weight){
   }
   // Code for the GO button
   goBtn.addEventListener('click',() => {
+	console.log('Button clicked')
     const age = ageSpinner.value;
     const gender = genderVal.value;
     const height = heightSpinner.value;
