@@ -47,30 +47,29 @@
           <!-- Exercise box -->
           <div id="exercise-container">
             <div class="exercises">
-            <h2>Exercises</h2>
-            <div class ="search">
-              <input type ="text" class ="exerciseInput" placeholder ="search exercises target" spellcheck="false">
-              <button class ="exSearch" for ="exercise">Search</button> 
+              <h2>Exercises</h2>
+              <div class ="search">
+                <input type ="text" class ="exerciseInput" placeholder ="search exercises target" spellcheck="false">
+                <button class ="exSearch" for ="exercise">Search</button> 
+              </div>
+              <p> Name: <span class="exName"></span> </p>
+              <p> Target: <span class="exTarget"></span> </p>
+              <p> Equipment: <span class="exEquipment"></span> </p>
+              <p> Link: <span class="exUrl"></span> </p>
             </div>
-            <p> Name: <span class="exName"></span> </p>
-            <p> Target: <span class="exTarget"></span> </p>
-            <p> Equipment: <span class="exEquipment"></span> </p>
-            <p> Link: <span class="exUrl"></span> </p>
-          </div>
-          <!-- Nutrition box -->
-          <div class="diet">
-            <h2>Diet</h2>
-            <div class ="reSearch">
-              <input type ="text" class ="recipeInput" placeholder ="search recipes" spellcheck="false">
-              <button class ="recipeSearch" for ="recipe">Search</button>
+            <!-- Nutrition box -->
+            <div class="diet">
+              <h2>Diet</h2>
+              <div class ="reSearch">
+                <input type ="text" class ="recipeInput" placeholder ="search recipes" spellcheck="false">
+                <button class ="recipeSearch" for ="recipe">Search</button>
+              </div>
+              <p> Name: <span class="recipeName"></span> </p>
+              <p> Target: <span class="cuisineType"></span> </p>
+              <p> Equipment: <span class="calories"></span> </p>
+              <p> Link: <span class="recipeUrl"></span> </p>  
             </div>
-            <p> Name: <span class="recipeName"></span> </p>
-            <p> Target: <span class="cuisineType"></span> </p>
-            <p> Equipment: <span class="calories"></span> </p>
-            <p> Link: <span class="recipeUrl"></span> </p>
-            
-          </div>
-          <div class="discover">
+            <div class="discover">
                <!-- This is the main container -->
         <section id="healthCalcContainer">
          <!-- Heading of the card -->
@@ -99,26 +98,33 @@
           <input type="number" id="weightSpinner" name="weightSpinner" min="45" max="280" step="1" value="45">
         </div>
         <!-- Button to fetch and display data -->
+        
         <button class="goBtn login-btn">Go</button>
-         <h3 class="bmiLabel">BMI: </h3>
+        <div id="bmi_data">
+          <h3 class="bmiLabel">BMI: </h3>
          <!-- Div for holding the BMI data -->
-        <div class="bmiData"></div>
-        <h3 class="statusLabel">Status: </h3>
-        <!-- Status div -->
-        <div class="statusData"></div>
+          <div class="bmiData"></div>
+        </div>
+        <div id="status_data">
+          <h3 class="statusLabel">Status: </h3>
+          <!-- Status div -->
+          <div class="statusData"></div>
+        </div>
       </section>
     
-          </div>
+          
         </section>
         </main>
         <footer>
           <p>Follow Us</p>
-          <div class="social-media-icons">
-              <a href="https://www.facebook.com" class="fa-icon"><i class="fa-brands fa-facebook"></i></a>
-              <a href="https://www.twitter.com" class="fa-icon"><i class="fa-brands fa-twitter"></i></a>
-              <a href="https://www.instagram.com" class="fa-icon"><i class="fa-brands fa-instagram"></i></a>
-              <a href="https://www.youtube.com" class="fa-icon"><i class="fa-brands fa-youtube"></i></a>
-          </div>
+          <div class="social-menu social-media-icons">
+            <ul>
+                <li><a href="https://www.facebook.com" class="fa"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="https://www.twitter.com" class="fa"><i class="fa-brands fa-twitter"></i></a></li>
+                <li><a href="https://www.instagram.com" class="fa"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="https://www.youtube.com" class="fa"><i class="fa-brands fa-youtube"></i></a></li>
+            </ul>
+        </div>
       </footer>
       <script src="assets/app.js"></script>
 </html>
