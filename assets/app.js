@@ -1,8 +1,12 @@
 //search variables
 const exerciseInput = document.querySelector(".exerciseInput");
-const recipeInput = document.querySelector(".recipeInput")
-const exBtn = document.querySelector(".exSearch")
-const recipeBtn = document.querySelector(".recipeSearch")
+const recipeInput = document.querySelector(".recipeInput");
+const exBtn = document.querySelector(".exSearch");
+const recipeBtn = document.querySelector(".recipeSearch");
+const errorDisplay = document.querySelector(".error");
+const exerciseData = document.querySelector("#exerciseData");
+const nutritionContainer = document.querySelector(".nutritionContainer");
+
 // const apiUrl = 'https://exerciseapi3.p.rapidapi.com/search/?primaryMuscle=${params}'
 
 //exercise api
@@ -27,29 +31,36 @@ const options1 = {
 // //call exercise
 async function checkEx(body) {
 	const response = await fetch(`https://exercisedb.p.rapidapi.com/exercises/target/${body}`, options);
-	const data = await response.json();
+  //incorrent msg
+  if(response.status == 400){
+    document.querySelector(".error").style.display="block";
+    document.querySelector("#exerciseData").style.display = "none"; //display results after click
+  } 
+  else{
+    const data = await response.json();
+    //loop object to find random
+    function randData(data){
+          
+          
+          const keys = Object.keys(data);
+          const values = Object.values(data);
+          randKeys = keys[Math.floor(Math.random()*keys.length)];
+          randValues = values[Math.floor(Math.random()*values.length)];
+          return	randValues 
+          }
+    
+      const domNameValue = randData(data); // dont want to call function everytime
+    
+        //ex1
+      document.querySelector(".exName").textContent = domNameValue.name;
+      document.querySelector(".exTarget").textContent = domNameValue.target
+      document.querySelector(".exEquipment").textContent = domNameValue.equipment;
+      document.querySelector(".exUrl").textContent = domNameValue.gifUrl;	
 
-	//loop object to find randomg
-	function randData(data){
-		
-		
-		const keys = Object.keys(data);
-		const values = Object.values(data);
-		randKeys = keys[Math.floor(Math.random()*keys.length)];
-		randValues = values[Math.floor(Math.random()*values.length)];
-		return	randValues 
-		
-	}
-
-	const domNameValue = randData(data); // dont want to call function everytime
-
-	//ex1
-	document.querySelector(".exName").textContent = domNameValue.name;
-	document.querySelector(".exTarget").textContent = domNameValue.target
-	document.querySelector(".exEquipment").textContent = domNameValue.equipment;
-	document.querySelector(".exUrl").textContent = domNameValue.gifUrl;	
-	//NOTE: Dont uncomment these, free subcription only lets you call so many times before hitting daily limit!!!!!!!!!!!!!!!!!
-	
+      document.querySelector("#exerciseData").style.display = "block"; //display results after click
+      document.querySelector(".error").style.display="none";
+      //NOTE: Dont uncomment these, free subcription only lets you call so many times before hitting daily limit!!!!!!!!!!!!!!!!!
+    }
 }
 
 //calling checkEx function
@@ -59,30 +70,29 @@ exBtn.addEventListener('click', ()=> {
 
 //fetch recipe api
 async function checkRecipe(params) {
-	const response1 = await fetch(`https://edamam-recipe-search.p.rapidapi.com/search?q=${params}`, options1); 
-	const recipeData = await response1.json();
-	// console.log(recipeData);
-	const arrRecipe = recipeData.hits;
-	// console.log(arrRecipe);
+	const response = await fetch(`https://edamam-recipe-search.p.rapidapi.com/search?q=${params}`, options1); 
+  const recipeData = await response.json();
+  const arrRecipe = recipeData.hits;
 
-	//loop object to find random
-	function randRecipe(arrRecipe){
-		const keys1 = Object.keys(arrRecipe);
-		const values1 = Object.values(arrRecipe);
-		randKeys1 = keys1[Math.floor(Math.random()*keys1.length)]; //redundant
-		randValues1 = values1[Math.floor(Math.random()*values1.length)];
-		return	randValues1
-		} 
-	const domRecipeValues = randRecipe(arrRecipe); // dont want to call function everytime
-	console.log(domRecipeValues);
-
-	// recipe
-	document.querySelector(".recipeName").innerHTML = domRecipeValues.recipe.label;
-	document.querySelector(".cuisineType").innerHTML = domRecipeValues.recipe.cuisineType;
-	document.querySelector(".calories").innerHTML = domRecipeValues.recipe.calories;
-	document.querySelector(".recipeUrl").innerHTML = domRecipeValues.recipe.url;
-}
-
+    //loop object to find random
+  function randRecipe(arrRecipe){
+      const keys1 = Object.keys(arrRecipe);
+      const values1 = Object.values(arrRecipe);
+      // randKeys1 = keys1[Math.floor(Math.random()*keys1.length)]; //redundant
+      randValues1 = values1[Math.floor(Math.random()*values1.length)];
+      return	randValues1
+      } 
+  const domRecipeValues = randRecipe(arrRecipe); // dont want to call function everytime
+    // console.log(domRecipeValues);
+  
+    // recipe
+  document.querySelector(".recipeName").textContent = domRecipeValues.recipe.label;
+  document.querySelector(".cuisineType").innerHTML = domRecipeValues.recipe.cuisineType;
+  document.querySelector(".calories").innerHTML = domRecipeValues.recipe.calories;
+  document.querySelector(".recipeUrl").innerHTML = domRecipeValues.recipe.url;
+  
+  document.querySelector("#nutritionContainer").style.display = "block"; //display results after click
+  }
 
 
 recipeBtn.addEventListener('click', ()=> {
@@ -196,4 +206,4 @@ function loadHealthDataFromLocalStorage(){
 }
 //call the load function when the page loads
 window.addEventListener('load', loadHealthDataFromLocalStorage)
-//-------------------------------------- Changes from Francis End Here-----------------------------------------
+//-------------------------------------- Changes from Francis End Here-----------------------------------------//

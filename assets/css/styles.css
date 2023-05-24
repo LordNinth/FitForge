@@ -86,6 +86,7 @@ header {
   gap: 20px;
 }
 
+
 #exercise-container > div {
   width: 100%;
 }
@@ -118,6 +119,22 @@ header {
   color: #ebf2fa;
   background-color: rgba(7, 189, 245, 0.5);
   word-wrap: break-word;
+}
+
+
+/* clean view */
+#exerciseData, #nutritionContainer{
+    display: none; 
+  }
+
+.error, .nutritionError {
+  /* text-align: left;
+  margin-left: 10px;
+  font-size: 14px;
+  margin-top: 10px;
+  color: white;
+  text-decoration: none; */
+  display: none;
 }
 #tagline {
   color: #ebf2fa;

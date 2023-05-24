@@ -15,26 +15,6 @@
     </header>
     <main>
       
-      <!-- Exercise section -->
-      <!-- <div class ="search">
-          <input type ="text" class ="exerciseInput" placeholder ="search exercises target" spellcheck="false">
-          <button class ="exSearch" for ="exercise">Search</button> </div>
-         <div id="exercise-container">
-        <div class="exercise1">Exercise 1 
-          <p> Name: <span class="exName"></span> </p>
-          <p> Target: <span class="exTarget"></span> </p>
-          <p> Equipment: <span class="exEquipment"></span> </p>
-          <p> Link: <span class="exUrl"></span> </p>
-        </div>
-        <div class="exercise2">Exercise 2
-          <p> Name: <span class="exName1"></span> </p>
-          <p> Target: <span class="exTarget1"></span> </p>
-          <p> Equipment: <span class="exEquipment1"></span> </p>
-          <p> Link: <span class="exUrl1"></span> </p>
-        </div>
-        <div class="exercise3">Exercise 3
-        </div> --> 
-      
   
       <section id="section-one">
         <p id="tagline">"Your Fitness Journey Starts Here"</p>
@@ -47,13 +27,18 @@
             <div class="exercises">
             <h2>Exercises</h2>
             <div class ="search">
-              <input type ="text" class ="exerciseInput" placeholder ="search exercises target" spellcheck="false">
+              <input type ="text" class ="exerciseInput" placeholder ="search body targets" spellcheck="false">
               <button class ="exSearch" for ="exercise">Search</button> 
             </div>
-            <p> Name: <span class="exName"></span> </p>
-            <p> Target: <span class="exTarget"></span> </p>
-            <p> Equipment: <span class="exEquipment"></span> </p>
-            <p> Link: <span class="exUrl"></span> </p>
+            <div class="error">
+              <p>Incorrect targets: try glutes, spine, traps..</p>
+            </div>
+            <div id ="exerciseData">
+              <p> Name: <span class="exName"></span> </p>
+              <p> Target: <span class="exTarget"></span> </p>
+              <p> Equipment: <span class="exEquipment"></span> </p>
+              <p> Link: <span class="exUrl"></span> </p>
+            </div>
           </div>
           <!-- Nutrition box -->
           <div class="diet">
@@ -62,10 +47,15 @@
               <input type ="text" class ="recipeInput" placeholder ="search recipes" spellcheck="false">
               <button class ="recipeSearch" for ="recipe">Search</button>
             </div>
-            <p> Name: <span class="recipeName"></span> </p>
-            <p> Target: <span class="cuisineType"></span> </p>
-            <p> Equipment: <span class="calories"></span> </p>
-            <p> Link: <span class="recipeUrl"></span> </p>
+            <div class="nutritionError">
+              <p>Incorrect body targets: try chicken, beef..</p>
+            </div>
+            <div id ="nutritionContainer">
+              <p> Name: <span class="recipeName"></span> </p>
+              <p> cuisineType: <span class="cuisineType"></span> </p>
+              <p> Calories: <span class="calories"></span> </p>
+              <p> Link: <span class="recipeUrl"></span> </p>
+            </div>
             
           </div>
           <div class="discover">
