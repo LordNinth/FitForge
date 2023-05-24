@@ -14,7 +14,7 @@
       <button id="login" class="login-btn">Login / Sign Up</button>
     </header>
     <main>
-      <p id="tagline">"Your Fitness Journey Starts Here"</p>
+      
       <!-- Exercise section -->
       <!-- <div class ="search">
           <input type ="text" class ="exerciseInput" placeholder ="search exercises target" spellcheck="false">
@@ -37,24 +37,31 @@
       
   
       <section id="section-one">
+        <p id="tagline">"Your Fitness Journey Starts Here"</p>
         <!-- Exercise search -->
-         <div class ="search"></div>
-            <input type ="text" class ="exerciseInput" placeholder ="search exercises target" spellcheck="false">
-            <button class ="exSearch" for ="exercise">Search</button> </div>
+          
           <!-- recipe Search -->
-         <div class ="reSearch"></div>
-            <input type ="text" class ="recipeInput" placeholder ="search recipes" spellcheck="false">
-         <button class ="recipeSearch" for ="recipe">Search</button> </div>
+         
           <!-- Exercise box -->
           <div id="exercise-container">
-          <div class="exercises">Exercises 
+            <div class="exercises">
+            <div class ="search">
+              <input type ="text" class ="exerciseInput" placeholder ="search exercises target" spellcheck="false">
+              <button class ="exSearch" for ="exercise">Search</button> 
+            </div>
+            <h2>Exercises</h2>
             <p> Name: <span class="exName"></span> </p>
             <p> Target: <span class="exTarget"></span> </p>
             <p> Equipment: <span class="exEquipment"></span> </p>
             <p> Link: <span class="exUrl"></span> </p>
           </div>
           <!-- Nutrition box -->
-          <div class="diet">Diet
+          <div class="diet">
+            <div class ="reSearch">
+              <input type ="text" class ="recipeInput" placeholder ="search recipes" spellcheck="false">
+              <button class ="recipeSearch" for ="recipe">Search</button>
+            </div>
+            <h2>Diet</h2>
             <p> Name: <span class="recipeName"></span> </p>
             <p> Target: <span class="cuisineType"></span> </p>
             <p> Equipment: <span class="calories"></span> </p>
@@ -65,7 +72,7 @@
                <!-- This is the main container -->
         <section id="healthCalcContainer">
          <!-- Heading of the card -->
-            <h1>Health Calculator</h1> 
+            <h2>Health Calculator</h2> 
           <!-- spinner to get the age -->
             <div class="age">
             <label class="ageLabel" for="ageSpinnerLabel">Age:</label>
