@@ -37,7 +37,9 @@
       
   
       <section id="section-one">
-        <p id="tagline">"Your Fitness Journey Starts Here"</p>
+        <p id="tagline">Forge Your Fitness Journey with Fitforge!</p>
+        <h1 id="question">Ready to Get Started?</h1>
+        <h2 id="paragraph">Begin your journey with Fitforge today and discover the power of personalised fitness. Sign up now and take the first step towards a healthier, fitter you.</h2>
         <!-- Exercise search -->
           
           <!-- recipe Search -->
@@ -96,13 +98,18 @@
           <input type="number" id="weightSpinner" name="weightSpinner" min="45" max="280" step="1" value="45">
         </div>
         <!-- Button to fetch and display data -->
+        
         <button class="goBtn login-btn">Go</button>
-         <h3 class="bmiLabel">BMI: </h3>
+        <div id="bmi_data">
+          <h3 class="bmiLabel">BMI: </h3>
          <!-- Div for holding the BMI data -->
-        <div class="bmiData"></div>
-        <h3 class="statusLabel">Status: </h3>
-        <!-- Status div -->
-        <div class="statusData"></div>
+          <div class="bmiData"></div>
+        </div>
+        <div id="status_data">
+          <h3 class="statusLabel">Status: </h3>
+          <!-- Status div -->
+          <div class="statusData"></div>
+        </div>
       </section>
     
           
@@ -110,12 +117,14 @@
         </main>
         <footer>
           <p>Follow Us</p>
-          <div class="social-media-icons">
-              <a href="https://www.facebook.com" class="fa-icon"><i class="fa-brands fa-facebook"></i></a>
-              <a href="https://www.twitter.com" class="fa-icon"><i class="fa-brands fa-twitter"></i></a>
-              <a href="https://www.instagram.com" class="fa-icon"><i class="fa-brands fa-instagram"></i></a>
-              <a href="https://www.youtube.com" class="fa-icon"><i class="fa-brands fa-youtube"></i></a>
-          </div>
+          <div class="social-menu social-media-icons">
+            <ul>
+                <li><a href="https://www.facebook.com" class="fa"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="https://www.twitter.com" class="fa"><i class="fa-brands fa-twitter"></i></a></li>
+                <li><a href="https://www.instagram.com" class="fa"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="https://www.youtube.com" class="fa"><i class="fa-brands fa-youtube"></i></a></li>
+            </ul>
+        </div>
       </footer>
       <script src="assets/app.js"></script>
 </html>
