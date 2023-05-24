@@ -105,6 +105,16 @@ header {
   font-size: 0.75em;
 
 }
+
+.ageLabel{
+  margin-left:120px;
+}
+.genderLabel{
+  margin-left:72px;
+}
+.weightLabel{
+  margin-left:3px
+}
 .diet {
   padding: 20px;
   border-radius: 15px 50px 30px 5px;
@@ -121,10 +131,35 @@ header {
   color: #ebf2fa;
   background-color: rgba(7, 189, 245, 0.5);
   word-wrap: break-word;
+  
 }
 
-button.goBtn{
-  font-size: 2.5rem;
+
+button.calcButtons{
+  font-size: 2rem;
+  /* margin-left: 70px; */
+  border: rgba(7, 189, 245, 0.3) 3px solid;
+  border-radius: 8px;
+  color: #ebf2fa;
+  background-color: rgba(3, 128, 167, 0.7);
+  padding:3px;
+  cursor: pointer;
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2);
+  
+}
+button.calcButtons:hover {
+  background-color: #00b4db;
+  color: white;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
+}
+hr {
+  background-color: white;
+  color: white;
+  height: 2px;
+  border-width: 0;
+  margin: 1em 0;
+  padding: 0;
+  box-shadow: inset 0 1px 0 #ccc;
 }
 
 #tagline {
@@ -184,7 +219,7 @@ main {
 }
 
 
-.recipeSearch,
+/* .recipeSearch,
 .exSearch {
     font-size: 2.5rem;
     cursor: pointer;
@@ -194,35 +229,14 @@ main {
     border-radius: 20px solid;
     background: linear-gradient(to left, #00b4db, #0083b0);
     transition:0.5s;
-    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2);}
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2);} */
 
 .exSearch:hover,.recipeSearch:hover{
   background: #0083b0;
   color: white;
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
 }
-/* I try to do a buuton for heath calculator */
-/*.login-btn {
-  color: #ebf2fa;
-  text-align: center;
-  border-radius: 0%;
-} */
-/*
-.exercise1, .exercise2, .exercise3 {
-  width: 30%;
-  height: 220px;
-  border: 1px solid #ccc;
-  padding: 20px;
-  box-sizing: border-box;
-  text-align: left;
-  word-wrap: break-word;
-}
 
-#bmi_data, #status_data{
-  display:flex;
-  align-items: baseline;
-  gap:10px;
-}
 
 /* footer styles */
 
