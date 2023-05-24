@@ -94,6 +94,12 @@ header {
   word-wrap: break-word;
 }
 
+.exerciseInput,.recipeInput{
+  padding-left: 5px;
+}
+#ageSpinner,#heightSpinner, #weightSpinner{
+  text-align: center;
+}
 .diet {
   padding: 20px;
   border-radius: 15px 50px 30px 5px;
