@@ -96,7 +96,7 @@ header {
 }
 
 .exerciseInput,.recipeInput{
-  padding-left: 5px;
+  padding: 10px 10px;
 }
 #ageSpinner,#heightSpinner, #weightSpinner{
   text-align: center;
@@ -118,6 +118,11 @@ header {
   background-color: rgba(7, 189, 245, 0.5);
   word-wrap: break-word;
 }
+
+button.goBtn{
+  font-size: 2.5rem;
+}
+
 #tagline {
   color: #ebf2fa;
   text-align: center;
@@ -171,7 +176,9 @@ main {
   gap:10px;
   flex-direction: row;
   align-items: baseline;
+
 }
+
 
 .recipeSearch,
 .exSearch {
@@ -180,12 +187,14 @@ main {
     color: #ebf2fa ;
     display: flexbox;
     padding: 5px 10px;
-    border-radius: 5px solid;
+    border-radius: 20px solid;
     background: linear-gradient(to right, #00b4db, #0083b0);
-
-
 }
 
+.exSearch:hover,.recipeSearch:hover{
+  background: #0083b0;
+  color: white;
+}
 /* I try to do a buuton for heath calculator */
 /*.login-btn {
   color: #ebf2fa;
