@@ -74,9 +74,8 @@ header {
 #section-one {
   padding: 200px 20px;
 }
-.exercise1,
-.exercise2,
-.exercise3 #exercise-container {
+
+#exercise-container {
   display: grid;
   grid-template-areas:
     "excercise-one"
@@ -138,13 +137,15 @@ main {
   #exercise-container {
     display: grid;
     grid-template-areas: "excercise-one excercise-two excercise-three";
-    gap: 50px;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
   }
 }
 /* I try to do a buuton for heath calculator */
 .login-btn {
   color: #ebf2fa;
   text-align: center;
+  border-radius: 0%;
 }
 /*
 .exercise1, .exercise2, .exercise3 {
