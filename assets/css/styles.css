@@ -93,10 +93,10 @@ header {
 #exercise-container div:nth-child(1) {
   /*grid-area: excercise-one;*/
   padding: 20px;
-  border: rgba(7,189,245, 0.3) 3px solid;
+  border: rgba(7, 189, 245, 0.3) 3px solid;
   border-radius: 15px 50px 30px 5px;
   color: #ebf2fa;
-  background-color: rgba(7,189,245, 0.5);
+  background-color: rgba(7, 189, 245, 0.5);
   word-wrap: break-word;
 }
 
@@ -104,19 +104,19 @@ header {
   /*grid-area: excercise-two;*/
   padding: 20px;
   border-radius: 15px 50px 30px 5px;
-  border: rgba(7,189,245, 0.3) 3px solid;
+  border: rgba(7, 189, 245, 0.3) 3px solid;
   color: #ebf2fa;
-  background-color: rgba(7,189,245, 0.5);
+  background-color: rgba(7, 189, 245, 0.5);
   word-wrap: break-word;
 }
 
 #exercise-container div:nth-child(3) {
   /*grid-area: excercise-three;*/
   padding: 20px;
-  border: rgba(7,189,245, 0.3) 3px solid;
+  border: rgba(7, 189, 245, 0.3) 3px solid;
   border-radius: 15px 50px 30px 5px;
   color: #ebf2fa;
-  background-color: rgba(7,189,245, 0.5);
+  background-color: rgba(7, 189, 245, 0.5);
   word-wrap: break-word;
 }
 #tagline {
@@ -127,7 +127,12 @@ header {
   font-size: 60px;
 }
 main {
-  background-image:  linear-gradient(to bottom, rgba(6,71,137), rgba(255, 255, 255,0)), url("/assets/backgroundImage.png");
+  background-image: linear-gradient(
+      to bottom,
+      rgba(6, 71, 137),
+      rgba(255, 255, 255, 0)
+    ),
+    url("/assets/backgroundImage.png");
   background-repeat: no-repeat;
   background-position: center; /* Center the image */
   height: 100%;
@@ -144,7 +149,7 @@ main {
     /*display: grid;
     grid-template-areas: "excercise-one excercise-two excercise-three";
     grid-template-columns: 1fr 1fr 1fr;*/
-    display:flex;
+    display: flex;
     gap: 20px;
     flex-direction: row;
   }
@@ -154,11 +159,11 @@ main {
   }
 }
 /* I try to do a buuton for heath calculator */
-.login-btn {
+/* .login-btn {
   color: #ebf2fa;
   text-align: center;
   border-radius: 0%;
-}
+} */
 /*
 .exercise1, .exercise2, .exercise3 {
   width: 30%;
