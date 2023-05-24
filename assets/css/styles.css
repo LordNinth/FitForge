@@ -142,6 +142,13 @@ main {
     width: calc(33.3% - 20px);
   }
 }
+
+#bmi_data, #status_data{
+  display: flex;
+  gap:10px;
+  flex-direction: row;
+  align-items: baseline;
+}
 /* I try to do a buuton for heath calculator */
 /*.login-btn {
   color: #ebf2fa;
