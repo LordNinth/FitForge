@@ -96,10 +96,14 @@ header {
 }
 
 .exerciseInput,.recipeInput{
-  padding: 10px 10px;
+  padding: 15px 12px;
+  border-radius: 5px;
+  box-shadow: inset 0 0 5px 0 rgba(0, 0, 0, 0.2);
 }
-#ageSpinner,#heightSpinner, #weightSpinner{
+#ageSpinner,#heightSpinner, #weightSpinner, #gender{
   text-align: center;
+  font-size: 0.75em;
+
 }
 .diet {
   padding: 20px;
@@ -183,17 +187,19 @@ main {
 .recipeSearch,
 .exSearch {
     font-size: 2.5rem;
-    
+    cursor: pointer;
     color: #ebf2fa ;
     display: flexbox;
     padding: 5px 10px;
     border-radius: 20px solid;
-    background: linear-gradient(to right, #00b4db, #0083b0);
-}
+    background: linear-gradient(to left, #00b4db, #0083b0);
+    transition:0.5s;
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2);}
 
 .exSearch:hover,.recipeSearch:hover{
   background: #0083b0;
   color: white;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
 }
 /* I try to do a buuton for heath calculator */
 /*.login-btn {
