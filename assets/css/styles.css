@@ -231,13 +231,12 @@ footer p {
   color: #ebf2fa;
   font-size: 2.5rem;
   height: auto;
-  margin: 0 15px;
 }
 
 .fa-icon {
   color: white;
-  font-size: 2.5rem;
-  margin: 0 10px;
+  font-size: 3.5rem;
+  margin: 0 15px;
 }
 
 .fa-icon:visited {
