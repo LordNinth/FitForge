@@ -110,6 +110,7 @@ const genderVal = document.querySelector('#gender')
 const weightSpinner = document.querySelector('#weightSpinner')
 const heightSpinner = document.querySelector('#heightSpinner')
 const goBtn = document.querySelector('.goBtn')
+const resetBtn =document.querySelector('.resetBtn')
 
 //get display labels
 const bmiContainer = document.querySelector('.bmiData')
@@ -206,4 +207,25 @@ function loadHealthDataFromLocalStorage(){
 }
 //call the load function when the page loads
 window.addEventListener('load', loadHealthDataFromLocalStorage)
+
+
+//function to reset the form
+
+function resetCalculator() {
+  // Reset local storage
+  localStorage.clear();
+
+  // Reset form field values
+  ageSpinner.value = 16;
+  // genderVal.value = 'M';
+  heightSpinner.value = 120;
+  weightSpinner.value = 45;
+  bmiContainer.textContent ="";
+  statusContainer.textContent ="";
+
+}
+resetBtn.addEventListener('click', () =>{
+  console.log('reset button clicked')
+  resetCalculator();
+})
 //-------------------------------------- Changes from Francis End Here-----------------------------------------//

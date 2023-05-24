@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/be5d79728a.js" crossorigin="anonymous"></script>
     <title>FitForge</title>
-    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/styles.css">
   </head>
   <body>
     <header>
@@ -14,51 +14,50 @@
       <button id="login" class="login-btn">Login / Sign Up</button>
     </header>
     <main>
-      
-  
-      <section id="section-one">
-        <p id="tagline">"Your Fitness Journey Starts Here"</p>
-        <!-- Exercise search -->
-          
-          <!-- recipe Search -->
+         <section id="section-one">
+        <p id="tagline">Forge Your Fitness Journey with Fitforge!</p>
+        <h1 id="question">Ready to Get Started?</h1>
+        <h2 id="paragraph">Begin your journey with Fitforge today and discover the power of personalised fitness. Sign up now and take the first step towards a healthier, fitter you.</h2>
+        
          
           <!-- Exercise box -->
           <div id="exercise-container">
             <div class="exercises">
-            <h2>Exercises</h2>
-            <div class ="search">
-              <input type ="text" class ="exerciseInput" placeholder ="search body targets" spellcheck="false">
-              <button class ="exSearch" for ="exercise">Search</button> 
-            </div>
-            <div class="error">
+              <h2>Exercises</h2>
+              <div class ="search">
+                <input type ="text" class ="exerciseInput" placeholder ="search body targets" spellcheck="false">
+                <i class="fas fa-search"></i>
+                <button class ="exSearch" for ="exercise">Search</button> 
+              </div>
+              <div class="error">
               <p>Incorrect targets: try glutes, spine, traps..</p>
             </div>
             <div id ="exerciseData">
               <p> Name: <span class="exName"></span> </p>
-              <p> Target: <span class="exTarget"></span> </p>
-              <p> Equipment: <span class="exEquipment"></span> </p>
-              <p> Link: <span class="exUrl"></span> </p>
+                <p> Target: <span class="exTarget"></span> </p>
+                <p> Equipment: <span class="exEquipment"></span> </p>
+                <p> Link: <span class="exUrl"></span> </p>
+              </div>
             </div>
-          </div>
           <!-- Nutrition box -->
-          <div class="diet">
-            <h2>Diet</h2>
-            <div class ="reSearch">
-              <input type ="text" class ="recipeInput" placeholder ="search recipes" spellcheck="false">
-              <button class ="recipeSearch" for ="recipe">Search</button>
-            </div>
-            <div class="nutritionError">
+            <div class="diet">
+              <h2>Diet</h2>
+              <div class ="reSearch">
+                <input type ="text" class="recipeInput" placeholder ="search recipes" spellcheck="false">
+                <i class="fas fa-search"></i>
+                <button class ="recipeSearch" for ="recipe">Search</button>
+              </div>
+              <div class="nutritionError">
               <p>Incorrect body targets: try chicken, beef..</p>
             </div>
             <div id ="nutritionContainer">
-              <p> Name: <span class="recipeName"></span> </p>
-              <p> cuisineType: <span class="cuisineType"></span> </p>
-              <p> Calories: <span class="calories"></span> </p>
-              <p> Link: <span class="recipeUrl"></span> </p>
+                <p> Name: <span class="recipeName"></span> </p>
+                <p> cuisineType: <span class="cuisineType"></span> </p>
+                <p> Calories: <span class="calories"></span> </p>
+                <p> Link: <span class="recipeUrl"></span> </p>  
             </div>
-            
-          </div>
-          <div class="discover">
+            </div>
+            <div class="discover">
                <!-- This is the main container -->
         <section id="healthCalcContainer">
          <!-- Heading of the card -->
@@ -85,28 +84,37 @@
         <div class="weight">
           <label class="weightLabel"for="weightSpinner">Weight(kg):</label>
           <input type="number" id="weightSpinner" name="weightSpinner" min="45" max="280" step="1" value="45">
+          <button class="calcButtons goBtn">Calculate</button>
+          <button class="calcButtons resetBtn">Clear</button>
         </div>
         <!-- Button to fetch and display data -->
-        <button class="goBtn login-btn">Go</button>
-         <h3 class="bmiLabel">BMI: </h3>
+        <hr/>
+        
+        <div id="bmi_data">
+          <h3 class="bmiLabel">BMI: </h3>
          <!-- Div for holding the BMI data -->
-        <div class="bmiData"></div>
-        <h3 class="statusLabel">Status: </h3>
-        <!-- Status div -->
-        <div class="statusData"></div>
-      </section>
+          <div class="bmiData"></div>
+        </div>
+        <div id="status_data">
+          <h3 class="statusLabel">Status: </h3>
+          <!-- Status div -->
+          <div class="statusData"></div>
+        </div>
+        </section>
     
-          </div>
+          
         </section>
         </main>
         <footer>
           <p>Follow Us</p>
-          <div class="social-media-icons">
-              <a href="https://www.facebook.com" class="fa-icon"><i class="fa-brands fa-facebook"></i></a>
-              <a href="https://www.twitter.com" class="fa-icon"><i class="fa-brands fa-twitter"></i></a>
-              <a href="https://www.instagram.com" class="fa-icon"><i class="fa-brands fa-instagram"></i></a>
-              <a href="https://www.youtube.com" class="fa-icon"><i class="fa-brands fa-youtube"></i></a>
-          </div>
+          <div class="social-menu social-media-icons">
+            <ul>
+                <li><a href="https://www.facebook.com" class="fa"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="https://www.twitter.com" class="fa"><i class="fa-brands fa-twitter"></i></a></li>
+                <li><a href="https://www.instagram.com" class="fa"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="https://www.youtube.com" class="fa"><i class="fa-brands fa-youtube"></i></a></li>
+            </ul>
+        </div>
       </footer>
       <script src="assets/app.js"></script>
 </html>
