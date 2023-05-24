@@ -76,16 +76,22 @@ header {
 }
 
 #exercise-container {
-  display: grid;
+  /*display: grid;
   grid-template-areas:
     "excercise-one"
     "excercise-two"
-    "excercise-three";
+    "excercise-three";*/
+  display: flex;
+  flex-direction: column;
   gap: 20px;
 }
 
+#exercise-container > div {
+  width: 100%;
+}
+
 #exercise-container div:nth-child(1) {
-  grid-area: excercise-one;
+  /*grid-area: excercise-one;*/
   padding: 20px;
   border: white 3px solid;
   border-radius: 15px 50px 30px 5px;
@@ -95,7 +101,7 @@ header {
 }
 
 #exercise-container div:nth-child(2) {
-  grid-area: excercise-two;
+  /*grid-area: excercise-two;*/
   padding: 20px;
   border-radius: 15px 50px 30px 5px;
   border: white 3px solid;
@@ -105,7 +111,7 @@ header {
 }
 
 #exercise-container div:nth-child(3) {
-  grid-area: excercise-three;
+  /*grid-area: excercise-three;*/
   padding: 20px;
   border: white 3px solid;
   border-radius: 15px 50px 30px 5px;
@@ -135,10 +141,16 @@ main {
 /*section one Desktop*/
 @media only screen and (min-width: 768px) {
   #exercise-container {
-    display: grid;
+    /*display: grid;
     grid-template-areas: "excercise-one excercise-two excercise-three";
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;*/
+    display:flex;
     gap: 20px;
+    flex-direction: row;
+  }
+
+  #exercise-container > div {
+    width: calc(33.3% - 20px);
   }
 }
 /* I try to do a buuton for heath calculator */
