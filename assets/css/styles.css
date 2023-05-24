@@ -72,15 +72,10 @@ header {
 /*section one CSS*/
 
 #section-one {
-  padding: 100px 20px 200px 20px;
+  padding:50px 20px 200px 20px;
 }
 
 #exercise-container {
-  /*display: grid;
-  grid-template-areas:
-    "excercise-one"
-    "excercise-two"
-    "excercise-three";*/
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -90,8 +85,7 @@ header {
   width: 100%;
 }
 
-#exercise-container div:nth-child(1) {
-  /*grid-area: excercise-one;*/
+.exercises {
   padding: 20px;
   border: rgba(7, 189, 245, 0.3) 3px solid;
   border-radius: 15px 50px 30px 5px;
@@ -100,8 +94,7 @@ header {
   word-wrap: break-word;
 }
 
-#exercise-container div:nth-child(2) {
-  /*grid-area: excercise-two;*/
+.diet {
   padding: 20px;
   border-radius: 15px 50px 30px 5px;
   border: rgba(7, 189, 245, 0.3) 3px solid;
@@ -110,8 +103,7 @@ header {
   word-wrap: break-word;
 }
 
-#exercise-container div:nth-child(3) {
-  /*grid-area: excercise-three;*/
+.discover {
   padding: 20px;
   border: rgba(7, 189, 245, 0.3) 3px solid;
   border-radius: 15px 50px 30px 5px;
@@ -146,9 +138,6 @@ main {
 /*section one Desktop*/
 @media only screen and (min-width: 768px) {
   #exercise-container {
-    /*display: grid;
-    grid-template-areas: "excercise-one excercise-two excercise-three";
-    grid-template-columns: 1fr 1fr 1fr;*/
     display: flex;
     gap: 20px;
     flex-direction: row;
@@ -158,73 +147,11 @@ main {
     width: calc(33.3% - 20px);
   }
 }
-/* I try to do a buuton for heath calculator */
-/*.login-btn {
-  color: #ebf2fa;
-  text-align: center;
-  border-radius: 0%;
-} */
-/*
-.exercise1, .exercise2, .exercise3 {
-  width: 30%;
-  height: 220px;
-  border: 1px solid #ccc;
-  padding: 20px;
-  box-sizing: border-box;
-  text-align: left;
-  word-wrap: break-word;
-}
 
-} /*
-/*
-.search {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-.reSearch {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-#recipeContainer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-top: 50px;
-}
-
-.recipe1,
-.recipe2,
-.recipe3 {
-  width: 30%;
-  height: 200px;
-  border: 1px solid #ccc;
-  padding: 10px;
-  box-sizing: border-box;
-  text-align: left;
-  word-wrap: break-word;
-}
-.header .navbar a:hover {
-  color: #427aa1;
-}
-
-.header .icons div {
-  font-size: 2.5rem;
-  color: #ebf2fa;
-  padding: 0.5rem;
-  cursor: pointer;
-  margin-left: 0.5rem;
-}
-
-.header .icons div:hover {
-  transform: rotate(180deg);
-}
-
-#menu-btn {
-  display: none;
+#bmi_data, #status_data{
+  display:flex;
+  align-items: baseline;
+  gap:10px;
 }
 
 /* footer styles */
