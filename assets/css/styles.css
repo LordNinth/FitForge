@@ -49,8 +49,6 @@ header {
   color: #fff;
 }
 
-
-
 .login-btn {
   background: linear-gradient(to right, #00b4db, #0083b0);
   border: none;
@@ -73,87 +71,80 @@ header {
 
 /*section one CSS*/
 
-#section-one{
-    padding: 200px 20px;
+#section-one {
+  padding: 200px 20px;
 }
 .exercise1,
 .exercise2,
-.exercise3 
-#exercise-container {
+.exercise3 #exercise-container {
   display: grid;
-  grid-template-areas: 
-  'excercise-one'
-  'excercise-two'
-  'excercise-three'
-  ;
-  gap:20px;
+  grid-template-areas:
+    "excercise-one"
+    "excercise-two"
+    "excercise-three";
+  gap: 20px;
 }
 
-#exercise-container div:nth-child(1){
-    grid-area:excercise-one;
-    padding: 20px;
-    border:white 3px solid;
-    border-radius: 15px 50px 30px 5px;
-    color: #ebf2fa ;
-    background-color:rgba(0, 180, 219, 0.2); 
-    word-wrap: break-word
-    
-
+#exercise-container div:nth-child(1) {
+  grid-area: excercise-one;
+  padding: 20px;
+  border: white 3px solid;
+  border-radius: 15px 50px 30px 5px;
+  color: #ebf2fa;
+  background-color: rgba(0, 180, 219, 0.2);
+  word-wrap: break-word;
 }
 
-#exercise-container div:nth-child(2){
-    grid-area:excercise-two;
-    padding: 20px;
-    border-radius: 15px 50px 30px 5px;
-    border: white 3px solid;
-    color: #ebf2fa;
-    background-color: rgba(0, 180, 219, 0.2); 
-    word-wrap: break-word
+#exercise-container div:nth-child(2) {
+  grid-area: excercise-two;
+  padding: 20px;
+  border-radius: 15px 50px 30px 5px;
+  border: white 3px solid;
+  color: #ebf2fa;
+  background-color: rgba(0, 180, 219, 0.2);
+  word-wrap: break-word;
 }
 
-#exercise-container div:nth-child(3){
-    grid-area:excercise-three;
-    padding: 20px;
-    border: white 3px solid;
-    border-radius: 15px 50px 30px 5px;
-    color: #ebf2fa;
-    background-color: rgba(0, 180, 219, 0.2); 
-    word-wrap: break-word
-
-} 
-  #tagline {
-    color: #ebf2fa;
-    text-align: center;
-    padding: 50px;
-    text-decoration:underline;
-    font-size: 60px;
-    
+#exercise-container div:nth-child(3) {
+  grid-area: excercise-three;
+  padding: 20px;
+  border: white 3px solid;
+  border-radius: 15px 50px 30px 5px;
+  color: #ebf2fa;
+  background-color: rgba(0, 180, 219, 0.2);
+  word-wrap: break-word;
+}
+#tagline {
+  color: #ebf2fa;
+  text-align: center;
+  padding: 50px;
+  text-decoration: underline;
+  font-size: 60px;
 }
 main {
-    background-image: url("/assets/backgroundImage.png") ;
-    background-repeat: no-repeat;
-    background-position: center; /* Center the image */
-    height: 100%;
-    background-size: cover;
-    color: #ebf2fa;
-    text-decoration: double;
-    font-size: 30px;
-    border-radius: 5px white;  
+  background-image: url("/assets/backgroundImage.png");
+  background-repeat: no-repeat;
+  background-position: center; /* Center the image */
+  height: 100%;
+  background-size: cover;
+  color: #ebf2fa;
+  text-decoration: double;
+  font-size: 30px;
+  border-radius: 5px white;
 }
 
-    /*section one Desktop*/
-@media only screen and (min-width:768px){
-    #exercise-container {
-        display: grid;
-        grid-template-areas: 
-        "excercise-one excercise-two excercise-three";
-        gap: 50px;
-      }
+/*section one Desktop*/
+@media only screen and (min-width: 768px) {
+  #exercise-container {
+    display: grid;
+    grid-template-areas: "excercise-one excercise-two excercise-three";
+    gap: 50px;
+  }
 }
 /* I try to do a buuton for heath calculator */
 .login-btn {
-    color: #ebf2fa;
-    text-align: center;
+  color: #ebf2fa;
+  text-align: center;
 }
 /*
 .exercise1, .exercise2, .exercise3 {
@@ -236,12 +227,22 @@ footer p {
   margin-bottom: 10px;
 }
 
-#social-media-icons img {
-  width: 2rem;
+.social-media-icons {
+  color: #ebf2fa;
+  font-size: 2.5rem;
   height: auto;
+  margin: 0 15px;
+}
+
+.fa-icon {
+  color: white;
+  font-size: 2.5rem;
   margin: 0 10px;
 }
- 
+
+.fa-icon:visited {
+  color: white;
+}
 
 /* media queries start */
 
@@ -263,11 +264,11 @@ footer p {
   }
 
   .login-btn {
-    padding: 10px 20px; 
-    font-size: 14px; 
+    padding: 10px 20px;
+    font-size: 14px;
   }
 
   header {
-    padding: 10px; 
+    padding: 10px;
   }
 }
