@@ -103,11 +103,13 @@ header {
 }
 #ageSpinner,#heightSpinner, #weightSpinner, #gender{
   text-align: center;
-  font-size: 0.75em;
+  font-size: 0.5em;
   width:70px;
-  color:rgba(6, 71, 137, 10 0.3);
+  color:#053981;
   background-color: rgba(223, 236, 241, 0.5);
   font-weight: 300;
+  border-radius: 3px;
+  /* box-shadow: inset 0 0 5px 0 rgba(0, 0, 0, 0.2); */
 
 }
 #weightSpinner{
@@ -121,13 +123,47 @@ header {
 }
 .ageLabel{
   margin-left:122px;
+  margin-right:10px;
+  font-size: .80em;
 }
 .genderLabel{
-  margin-left:72px;
+  margin-left:78px;
+  margin-right:10px;
+  font-size: .80em;
 }
 .weightLabel{
-  margin-left:3px
+  margin-left:24px;
+  margin-right:10px;
+  font-size: 0.80em;
 }
+.heightLabel{
+  margin-left:20px;
+  margin-right:10px;
+  font-size: 0.80em;
+
+}
+.bmiData, .statusData{
+  /* background-color: #ebf2fa; */
+  background-color: rgba(223, 236, 241, 0.8);
+  color:#053981;
+  padding:5px;
+  width: 150px;
+  font-size: 0.5em;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: inset 0 0 5px 0 rgba(0, 0, 0, 0.2);
+  
+}
+.bmiLabel{
+  font-size: 0.8em;
+  padding-top:20px;
+  margin-left:35px;
+}
+.statusLabel{
+  font-size: 0.8em;
+  padding-top:20px;
+}
+
 .diet {
   padding: 20px;
   border-radius: 15px 50px 30px 5px;
@@ -174,7 +210,6 @@ hr {
   padding: 0;
   box-shadow: inset 0 1px 0 #ccc;
 }
-
 
 /* clean view */
 #exerciseData, #nutritionContainer{
@@ -246,18 +281,6 @@ main {
 
 }
 
-
-/* .recipeSearch,
-.exSearch {
-    font-size: 2.5rem;
-    cursor: pointer;
-    color: #ebf2fa ;
-    display: flexbox;
-    padding: 5px 10px;
-    border-radius: 20px solid;
-    background: linear-gradient(to left, #00b4db, #0083b0);
-    transition:0.5s;
-    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2);} */
 
 .exSearch:hover,.recipeSearch:hover{
   background: #0083b0;

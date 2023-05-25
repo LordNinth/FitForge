@@ -222,6 +222,8 @@ function resetCalculator() {
   weightSpinner.value = 45;
   bmiContainer.textContent ="";
   statusContainer.textContent ="";
+  
+
 
 }
 resetBtn.addEventListener('click', () =>{
