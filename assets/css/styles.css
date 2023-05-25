@@ -242,11 +242,9 @@ hr {
 #paragraph {
   color: #ebf2fa;
   text-align: center;
-  padding-top: 5px;
-  padding-right: 200px;
-  padding-bottom: 100px;
-  padding-left: 200px;
+  padding:20px 20px 100px 20px;
   font-size: 20px;
+
 }
 main {
   
@@ -271,6 +269,18 @@ main {
   #exercise-container > div {
     width: calc(33.3% - 20px);
   }
+
+  #paragraph {
+    color: #ebf2fa;
+    text-align: center;
+    padding-top: 5px;
+    padding-right: 200px;
+    padding-bottom: 100px;
+    padding-left: 200px;
+    font-size: 20px;
+  }
+
+
 }
 
 #bmi_data, #status_data{
