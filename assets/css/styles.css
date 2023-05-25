@@ -104,9 +104,15 @@ header {
 #ageSpinner,#heightSpinner, #weightSpinner, #gender{
   text-align: center;
   font-size: 0.75em;
+  width:70px;
+  color:rgba(6, 71, 137, 10 0.3);
+  background-color: rgba(223, 236, 241, 0.5);
+  font-weight: 300;
 
 }
-
+#weightSpinner{
+  margin-right:5px;
+}
 #exerciseData, p {
   font-size: 18px;
 }
@@ -114,7 +120,7 @@ header {
   font-size: 18px;
 }
 .ageLabel{
-  margin-left:120px;
+  margin-left:122px;
 }
 .genderLabel{
   margin-left:72px;
