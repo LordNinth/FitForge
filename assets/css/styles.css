@@ -257,7 +257,7 @@ main {
   color: #ebf2fa;
   text-decoration: double;
   font-size: 30px;
-  border-radius: 5px white;
+  border-radius: 5px;
 }
 
 /*section one Desktop*/
@@ -383,4 +383,5 @@ footer p {
   header {
     padding: 10px;
   }
+  
 }
