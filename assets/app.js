@@ -65,7 +65,7 @@ async function checkEx(body) {
           gifElement.src = domNameValue.gifUrl
           //add image to the page
           document.querySelector(".exUrl").appendChild(gifElement)
-          
+
       document.querySelector("#exerciseData").style.display = "block"; //display results after click
       document.querySelector(".error").style.display="none";
       //NOTE: Dont uncomment these, free subcription only lets you call so many times before hitting daily limit!!!!!!!!!!!!!!!!!
@@ -74,6 +74,11 @@ async function checkEx(body) {
 
 //calling checkEx function
 exBtn.addEventListener('click', ()=> {
+  //remove image container if it exists
+  const existingImageContainer = document.querySelector(".exUrl img")
+  if(existingImageContainer){
+    existingImageContainer.parentNode.removeChild(existingImageContainer)
+  }
 	checkEx(exerciseInput.value);
 })
 

@@ -145,7 +145,7 @@ header {
   margin-bottom:15px;
   margin-left:40px;
 }
-.calories, .cuisineType, .recipeName{
+.calories, .cuisineType, .recipeName, .exName, .exTarget, .exEquipment{
   color:#053981;
   background-color: rgba(223, 236, 241, 0.3);
   font-weight: 300;
@@ -155,9 +155,8 @@ header {
   padding-right:5px;
 }
 .linkLabel{
-  display:flex;
-  justify-content: center;
-  align-items: center;
+  margin-left:80px;
+
 }
 .recipeUrl a{
   color:#053981;
