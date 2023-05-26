@@ -13,7 +13,8 @@ const nutritionContainer = document.querySelector(".nutritionContainer");
 const options = {
 	method: 'GET',
 	headers: {
-		'X-RapidAPI-Key': 'f949d10bd8mshf91fea6233b3069p123fb3jsn202554e50322',
+		'X-RapidAPI-Key': '45a321c547mshbf41430848e0da1p17077ejsn7669b6d7e3c4',
+
 		'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com'
 	}
 };
@@ -55,8 +56,16 @@ async function checkEx(body) {
       document.querySelector(".exName").textContent = domNameValue.name;
       document.querySelector(".exTarget").textContent = domNameValue.target
       document.querySelector(".exEquipment").textContent = domNameValue.equipment;
-      document.querySelector(".exUrl").textContent = domNameValue.gifUrl;	
 
+    //  document.querySelector(".exUrl").textContent = domNameValue.gifUrl;	
+
+      // Attempting to add the image above as an element in the page
+          // create image element
+          const gifElement = document.createElement("img")
+          gifElement.src = domNameValue.gifUrl
+          //add image to the page
+          document.querySelector(".exUrl").appendChild(gifElement)
+          
       document.querySelector("#exerciseData").style.display = "block"; //display results after click
       document.querySelector(".error").style.display="none";
       //NOTE: Dont uncomment these, free subcription only lets you call so many times before hitting daily limit!!!!!!!!!!!!!!!!!
@@ -88,8 +97,10 @@ async function checkRecipe(params) {
     // recipe
   document.querySelector(".recipeName").textContent = domRecipeValues.recipe.label;
   document.querySelector(".cuisineType").innerHTML = domRecipeValues.recipe.cuisineType;
-  document.querySelector(".calories").innerHTML = domRecipeValues.recipe.calories;
-  document.querySelector(".recipeUrl").innerHTML = domRecipeValues.recipe.url;
+  document.querySelector(".calories").innerHTML = Math.round(domRecipeValues.recipe.calories);
+   //replace url with clickable link which opens in a new tab 
+  document.querySelector(".recipeUrl").innerHTML = `<a href="${domRecipeValues.recipe.url}" target="_blank">Click for More Info</a>`;
+  // document.querySelector(".recipeUrl").innerHTML = domRecipeValues.recipe.url;
   
   document.querySelector("#nutritionContainer").style.display = "block"; //display results after click
   }

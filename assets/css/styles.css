@@ -118,11 +118,67 @@ header {
 #exerciseData, p {
   font-size: 18px;
 }
-
+.exNameLabel{
+  margin-top:20px;
+  margin-left:64px;
+  margin-bottom:15px;
+}
+.exTargetLabel{
+  margin-top:20px;
+  margin-left:57px;
+  margin-bottom:15px;
+}
+.exEquipLabel{
+  margin-top:20px;
+  margin-left:10px;
+  margin-bottom:15px;
+}
 #nutritionContainer, p {
-  font-size: 18px;
+  font-size: 20px;
+}
+.recipeLabel{
+  margin-top:20px;
+  margin-left:64px;
+  margin-bottom:15px;
+}
+.caloriesLabel{
+  margin-bottom:15px;
+  margin-left:40px;
+}
+.calories, .cuisineType, .recipeName{
+  color:#053981;
+  background-color: rgba(223, 236, 241, 0.3);
+  font-weight: 300;
+  /* width:120px; */
+  border-radius: 3px;
+  padding-left:5px;
+  padding-right:5px;
+}
+.linkLabel{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.recipeUrl a{
+  color:#053981;
+}
+.exUrl img {
+  max-width: 200px;
+  max-height:100px;
+  border-radius:70%;
+  margin-left:100px;
+}
+.recipeUrl a:hover{
+  color:rgb(20, 216, 230);
+  text-decoration: underline;
+  
 }
 
+.cuisineLabel{
+  
+  margin-bottom:15px;
+ 
+}
 .ageLabel{
   margin-left:122px;
   margin-right:10px;
